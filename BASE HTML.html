@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="KGLOGO.JPG" alt="K-BOII GRPHIX Logo" class="logo">
+        <h1>Welcome to K-BOII GRAPHIX Portfolio:</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+		<div class="contact-info">
+        <p>Email: <a> KGOTHATSOMODISELLE9@GMAIL.COM</a></p>
+        <p>
+            <img src="WHATSAPPLOGO.jpg" alt="Phone Icon" class="phone-icon"> <!-- Small logo for phone -->
+            Phone: 081 439 5685
+        </p>
+    </div>
+</header>
+
+    </header>
+</body>
+
+
+
+    <section id="about">
+    <h2>About Me:</h2>
+    <p class="about-text">
+        Hi! I'm a graphic designer with a passion for creating stunning visuals that communicate effectively. 
+        With experience in various design projects, I strive to bring ideas to life through creativity and innovation.
+    </p>
+    <button class="read-more" onclick="toggleReadMore()">Read More</button>
+    <p class="more-text" style="display: none;">
+        I specialize in branding, print design, and digital media. My goal is to help businesses tell their stories visually and connect with their audience effectively.
+    </p>
+</section>
+
+<script>
+    function toggleReadMore() {
+        const moreText = document.querySelector('.more-text');
+        const button = document.querySelector('.read-more');
+
+        if (moreText.style.display === 'none') {
+            moreText.style.display = 'block';
+            button.textContent = 'Read Less';
+        } else {
+            moreText.style.display = 'none';
+            button.textContent = 'Read More';
+        }
+    }
+</script>
+
+
+    <section id="portfolio">
+    <h2>My Work:</h2>
+    <div class="portfolio-container">
+        <div class="portfolio-item" onclick="toggleImageSize(this)">
+            <img src="KG1.jpg" alt="Design Project 1" class="portfolio-image">
+            <h3>BOOKING POSTER</h3>
+            <p>Brief description of the project.</p>
+        </div>
+        <div class="portfolio-item" onclick="toggleImageSize(this)">
+            <img src="KG2.jpg" alt="Design Project 2" class="portfolio-image">
+            <h3>YOUTUBE BANNER DESIGN</h3>
+            <p>Brief description of the project.</p>
+        </div>
+        <div class="portfolio-item" onclick="toggleImageSize(this)">
+            <img src="KG3.jpg" alt="Design Project 3" class="portfolio-image">
+            <h3>ALBUM COVER ART</h3>
+            <p>Brief description of the project.</p>
+        </div>
+        <div class="portfolio-item" onclick="toggleImageSize(this)">
+            <img src="KG4.jpg" alt="Design Project 4" class="portfolio-image">
+            <h3>SCRAPBOOK</h3>
+            <p>Brief description of the project.</p>
+        </div>
+        <!-- Add more portfolio items as needed -->
+    </div>
+    <div id="overlay" onclick="closeImage()"></div>
+    <img id="enlargedImage" src="" alt="Enlarged Image" onclick="closeImage()">
+</section>
+
+
+
+
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+	
+	
+
+    <footer>
+        <p>&copy;BASE MONTANA WEBSITES 2024 My Graphic Design Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
